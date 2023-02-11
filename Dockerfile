@@ -9,4 +9,4 @@ EXPOSE 26656
 EXPOSE 26657 
 COPY script.sh script.sh
 RUN chmod +x script.sh
-CMD ./script.sh && $(which cosmovisor) run start || sleep infinity
+CMD ./script.sh && $(which cosmovisor) run start || sleep 30000
