@@ -7,4 +7,6 @@ RUN go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.4.0
 VOLUME /root/.core
 EXPOSE 26656
 EXPOSE 26657 
-CMD $(which cosmovisor) run start || sleep infinity
+COPY script.sh scrip.sh
+RUN chmod +x script.sh
+CMD ./script.sh && $(which cosmovisor) run start || sleep infinity
