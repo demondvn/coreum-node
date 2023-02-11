@@ -46,7 +46,7 @@ echo "export PORT=${PORT}" >> $HOME/.bash_profile
 source $HOME/.bash_profile
 
 # Set Vars
-if [ ! $NODENAME ]; then
+if [ ! $NODENAME ] then
 #   exit 125
 
 	read -p "hello@nodexcapital:~# [ENTER YOUR NODE] > " NODENAME
