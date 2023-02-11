@@ -15,7 +15,7 @@ echo -e "\e[0m"
 sleep 1
 
 # Variable
-DOWNLOAD_SNAPSHOT=0
+# DOWNLOAD_SNAPSHOT=0
 SOURCE=coreum
 WALLET=wallet
 BINARY=cored
@@ -122,7 +122,8 @@ sed -i -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0$DENOM\"/" $HOME/$
 # Enable snapshots
 sed -i -e "s/^snapshot-interval *=.*/snapshot-interval = \"2000\"/" $HOME/$FOLDER/$CHAIN/config/app.toml
 $BINARY tendermint unsafe-reset-all --home $HOME/$FOLDER/$CHAIN --keep-addr-book
-if [DOWNLOAD_SNAPSHOT -ep 1] then
+if [$DOWNLOAD_SNAPSHOT -ep 1] 
+then
   curl -L https://snap.nodexcapital.com/coreum/coreum-latest.tar.lz4 | tar -Ilz4 -xf - -C $HOME/$FOLDER/$CHAIN/
   
   #Delete Trash File
