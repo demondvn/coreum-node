@@ -151,9 +151,10 @@ fi
 # RestartSec=10
 # LimitNOFILE=65535
 # Environment="DAEMON_HOME=$HOME/$FOLDER/$CHAIN"
-export DAEMON_HOME=$HOME/$FOLDER/$CHAIN
-export DAEMON_NAME=$BINARY
-export UNSAFE_SKIP_BACKUP=true
+DAEMON_HOME=$HOME/$FOLDER/$CHAIN
+echo 'export DAEMON_HOME='$DAEMON_HOME >> $HOME/.bash_profile 
+echo 'export DAEMON_NAME='$BINARY >> $HOME/.bash_profile 
+echo 'export UNSAFE_SKIP_BACKUP=true' >> $HOME/.bash_profile 
 # Environment="DAEMON_NAME=$BINARY"
 # Environment="UNSAFE_SKIP_BACKUP=true"
 
