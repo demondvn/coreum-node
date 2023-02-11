@@ -169,7 +169,7 @@ echo 'export UNSAFE_SKIP_BACKUP=true' >> $HOME/.bash_profile
 #  systemctl enable $BINARY
 
 echo -e "\e[1m\e[35mSETUP FINISHED\e[0m"
-echo ""
+echo "DAEMON_HOME="$DAEMON_HOME
 echo -e "CHECK STATUS BINARY : \e[1m\e[35msystemctl status $BINARY\e[0m"
 echo -e "CHECK RUNNING LOGS : \e[1m\e[35mjournalctl -fu $BINARY -o cat\e[0m"
 echo -e "CHECK LOCAL STATUS : \e[1m\e[35mcurl -s localhost:${PORT}657/status | jq .result.sync_info\e[0m"
