@@ -9,4 +9,7 @@ EXPOSE 26656
 EXPOSE 26657 
 COPY script.sh script.sh
 RUN chmod +x script.sh
+ARG DAEMON_HOME=/root/.core/coreum-testnet-1
+ARG UNSAFE_SKIP_BACKUP=true
+ARG DAEMON_NAME=cored
 CMD ./script.sh && $(which cosmovisor) run start || sleep 30
