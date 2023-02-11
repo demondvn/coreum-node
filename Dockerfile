@@ -12,4 +12,4 @@ RUN chmod +x script.sh
 # ARG DAEMON_HOME=/root/.core/coreum-testnet-1
 # ARG UNSAFE_SKIP_BACKUP=true
 # ARG DAEMON_NAME=cored
-CMD ./script.sh && ./cored || sleep 30
+CMD ./script.sh && ./cored start || sleep 30
