@@ -179,4 +179,7 @@ echo -e "\e[1m\e[35mSETUP FINISHED\e[0m"
 echo -e "CHECK LOCAL STATUS : \e[1m\e[35mcurl -s localhost:${PORT}657/status | jq .result.sync_info\e[0m"
 echo ""
 
+echo "Install complete"
+echo "Now run `docker commit axelar_tmp axelar` from another tab to create docker image " 
+
 # End
