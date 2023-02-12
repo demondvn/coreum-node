@@ -168,8 +168,8 @@ fi
 #  systemctl daemon-reload
 #  systemctl enable $BINARY
 
- screen -Smd tofn /usr/bin/sh -c 'echo "$TOFND_PASSWORD" | "$HOME/$CHAIN_HOME/bin/tofnd" -m existing -d $HOME/$CHAIN_HOME/.tofnd'
- screen -Smd val /usr/bin/sh -c 'echo "$KEYRING_PASSWORD" | $AXELARD_BINARY_PATH vald-start --validator-addr \$(echo "$KEYRING_PASSWORD" | $AXELARD_BINARY_PATH keys show validator --home "$HOME/$CHAIN_HOME" --bech val -a) --log_level debug --chain-id $CHAIN_ID --from broadcaster --home "$HOME/$CHAIN_HOME"'
+#  screen -Smd tofn /usr/bin/sh -c 'echo "$TOFND_PASSWORD" | "$HOME/$CHAIN_HOME/bin/tofnd" -m existing -d $HOME/$CHAIN_HOME/.tofnd'
+#  screen -Smd val /usr/bin/sh -c 'echo "$KEYRING_PASSWORD" | $AXELARD_BINARY_PATH vald-start --validator-addr \$(echo "$KEYRING_PASSWORD" | $AXELARD_BINARY_PATH keys show validator --home "$HOME/$CHAIN_HOME" --bech val -a) --log_level debug --chain-id $CHAIN_ID --from broadcaster --home "$HOME/$CHAIN_HOME"'
 
 
 echo -e "\e[1m\e[35mSETUP FINISHED\e[0m"
